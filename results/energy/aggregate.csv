@@ -1,0 +1,3 @@
+﻿"build","repeats","P_idle_W","P_idle_W_sd","P_load_W","P_load_W_sd","E_system_J_per_run","E_system_J_per_run_sd","E_A_J_per_run","E_A_J_per_run_sd","E_B_J_per_run","E_B_J_per_run_sd","E_C_J_per_run","E_C_J_per_run_sd","E_system_J_per_Mcell","E_system_J_per_Mcell_sd"
+"life_O0","3","11.863","0.341","14.533","0.287","301.853","5.869","55.547","2.109","37.973","1.562","116.717","0.207","0.192","0.004"
+"life_native","3","11.477","0.153","12.873","0.241","6.01","0.104","0.653","0.146","0.427","0.106","2.54","0","0.004","0"

@@ -1,0 +1,12 @@
+ 48.86%  count_alive
+ 14.36%  step
+ 14.01%  rule
+ 12.61%  neighbors
+  8.17%  grid_hash
+  0.59%  init_random
+  0.29%  mtree_range_walk
+  0.29%  __handle_mm_fault
+  0.27%  __update_load_avg_cfs_rq
+  0.26%  percpu_counter_add_batch
+  0.25%  update_fast_timekeeper
+  0.05%  __filemap_get_folio

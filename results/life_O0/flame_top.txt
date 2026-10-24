@@ -1,0 +1,12 @@
+ 42.13%  neighbors
+ 30.13%  rule
+ 17.74%  count_alive
+  9.15%  step
+  0.47%  grid_hash
+  0.03%  update_load_avg
+  0.03%  __raw_callee_save___pv_queued_spin_unlock
+  0.02%  x86_pmu_disable
+  0.02%  trigger_load_balance
+  0.02%  account_user_time
+  0.02%  __this_cpu_preempt_check
+  0.01%  x86_pmu_disable_all

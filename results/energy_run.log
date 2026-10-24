@@ -1,0 +1,72 @@
+﻿Перевіряю контейнер bslab і збірки...
+[1/3] life_O0: простій 60 с
+[1/3] life_O0: навантаження ~90 с
+[1/3] life_O0: охолодження 30 с
+[1/3] life_native: простій 60 с
+[1/3] life_native: навантаження ~90 с
+[1/3] life_native: охолодження 30 с
+[2/3] life_native: простій 60 с
+[2/3] life_native: навантаження ~90 с
+[2/3] life_native: охолодження 30 с
+[2/3] life_O0: простій 60 с
+[2/3] life_O0: навантаження ~90 с
+[2/3] life_O0: охолодження 30 с
+[3/3] life_O0: простій 60 с
+[3/3] life_O0: навантаження ~90 с
+[3/3] life_O0: охолодження 30 с
+[3/3] life_native: простій 60 с
+[3/3] life_native: навантаження ~90 с
+[3/3] life_native: охолодження 30 с
+
+Підсумок за повторами:
+
+build       rep runs P_idle_W P_load_W P_dyn_W E_system_J_per_run E_A_J_per_run E_B_J_per_run E_C_J_per_run
+-----       --- ---- -------- -------- ------- ------------------ ------------- ------------- -------------
+life_O0       1    5    11.83    14.42    2.59             299.03          53.8         36.37        116.53
+life_native   1  192    11.65    12.76    1.11               5.96          0.52          0.33          2.54
+life_native   2  192    11.36    12.71    1.35               5.94          0.63          0.41          2.54
+life_O0       2    5    11.54    14.32    2.78             297.93         57.89         39.49        116.94
+life_O0       3    5    12.22    14.86    2.65              308.6         54.95         38.06        116.68
+life_native   3  193    11.42    13.15    1.74               6.13          0.81          0.54          2.54
+
+
+Середнє ± σ за збірками:
+
+
+build                   : life_O0
+repeats                 : 3
+P_idle_W                : 11.863
+P_idle_W_sd             : 0.341
+P_load_W                : 14.533
+P_load_W_sd             : 0.287
+E_system_J_per_run      : 301.853
+E_system_J_per_run_sd   : 5.869
+E_A_J_per_run           : 55.547
+E_A_J_per_run_sd        : 2.109
+E_B_J_per_run           : 37.973
+E_B_J_per_run_sd        : 1.562
+E_C_J_per_run           : 116.717
+E_C_J_per_run_sd        : 0.207
+E_system_J_per_Mcell    : 0.192
+E_system_J_per_Mcell_sd : 0.004
+
+build                   : life_native
+repeats                 : 3
+P_idle_W                : 11.477
+P_idle_W_sd             : 0.153
+P_load_W                : 12.873
+P_load_W_sd             : 0.241
+E_system_J_per_run      : 6.01
+E_system_J_per_run_sd   : 0.104
+E_A_J_per_run           : 0.653
+E_A_J_per_run_sd        : 0.146
+E_B_J_per_run           : 0.427
+E_B_J_per_run_sd        : 0.106
+E_C_J_per_run           : 2.54
+E_C_J_per_run_sd        : 0
+E_system_J_per_Mcell    : 0.004
+E_system_J_per_Mcell_sd : 0
+
+
+
+Файли: results\energy

@@ -1,0 +1,12 @@
+ 49.53%  count_alive
+ 20.99%  neighbors
+ 13.76%  rule
+  8.41%  step
+  5.82%  grid_hash
+  0.33%  check_preemption_disabled
+  0.32%  init_random
+  0.19%  debug_smp_processor_id
+  0.19%  __count_memcg_events
+  0.18%  srso_alias_safe_ret
+  0.18%  __sysvec_hyperv_stimer0
+  0.10%  lru_add_fn

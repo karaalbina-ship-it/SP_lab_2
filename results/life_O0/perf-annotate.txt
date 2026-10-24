@@ -1,0 +1,98 @@
+ Percent |	Source code & Disassembly of life_O0 for cycles:P (848 samples, percent: local period)
+------------------------------------------------------------------------------------------------------
+         :
+         :
+         :
+         : 3    Disassembly of section .text:
+         :
+         : 5    0000000000001553 <step>:
+         : 6    }
+         :
+         : 8    /* Гарячий цикл програми: обчислює наступне покоління. */
+         : 9    __attribute__((noinline))
+         : 10   void step(const Grid *cur, Grid *next)
+         : 11   {
+    0.00 :   1553:   endbr64
+    0.00 :   1557:   push   rbp
+    0.00 :   1558:   mov    rbp,rsp
+    0.00 :   155b:   push   rbx
+    0.00 :   155c:   sub    rsp,0x40
+    0.00 :   1560:   mov    QWORD PTR [rbp-0x40],rdi
+    0.00 :   1564:   mov    QWORD PTR [rbp-0x48],rsi
+         : 19   const int n = cur->n, w = cur->w;
+    0.00 :   1568:   mov    rax,QWORD PTR [rbp-0x40]
+    0.00 :   156c:   mov    eax,DWORD PTR [rax]
+    0.00 :   156e:   mov    DWORD PTR [rbp-0x30],eax
+    0.00 :   1571:   mov    rax,QWORD PTR [rbp-0x40]
+    0.00 :   1575:   mov    eax,DWORD PTR [rax+0x4]
+    0.00 :   1578:   mov    DWORD PTR [rbp-0x2c],eax
+         : 26   const uint8_t *restrict src = cur->cells;
+    0.00 :   157b:   mov    rax,QWORD PTR [rbp-0x40]
+    0.00 :   157f:   mov    rax,QWORD PTR [rax+0x8]
+    0.00 :   1583:   mov    QWORD PTR [rbp-0x28],rax
+         : 30   uint8_t *restrict dst = next->cells;
+    0.00 :   1587:   mov    rax,QWORD PTR [rbp-0x48]
+    0.00 :   158b:   mov    rax,QWORD PTR [rax+0x8]
+    0.00 :   158f:   mov    QWORD PTR [rbp-0x20],rax
+         :
+         : 35   for (int i = 1; i <= n; i++) {
+    0.00 :   1593:   mov    DWORD PTR [rbp-0x38],0x1
+    0.00 :   159a:   jmp    162b <step+0xd8>
+         : 38   const uint8_t *row = src + i * w;
+    0.00 :   159f:   mov    eax,DWORD PTR [rbp-0x38]
+    0.00 :   15a2:   imul   eax,DWORD PTR [rbp-0x2c]
+    0.00 :   15a6:   movsxd rdx,eax
+    0.00 :   15a9:   mov    rax,QWORD PTR [rbp-0x28]
+    0.00 :   15ad:   add    rax,rdx
+    0.00 :   15b0:   mov    QWORD PTR [rbp-0x18],rax
+         : 45   uint8_t *out = dst + i * w;
+    0.00 :   15b4:   mov    eax,DWORD PTR [rbp-0x38]
+    0.00 :   15b7:   imul   eax,DWORD PTR [rbp-0x2c]
+    0.00 :   15bb:   movsxd rdx,eax
+    0.00 :   15be:   mov    rax,QWORD PTR [rbp-0x20]
+    0.00 :   15c2:   add    rax,rdx
+    0.00 :   15c5:   mov    QWORD PTR [rbp-0x10],rax
+         : 52   for (int j = 1; j <= n; j++)
+    0.00 :   15c9:   mov    DWORD PTR [rbp-0x34],0x1
+    0.00 :   15d0:   jmp    161f <step+0xcc>
+         : 55   out[j] = rule(row[j], neighbors(row + j, w));
+    0.00 :   15d2:   mov    eax,DWORD PTR [rbp-0x34]
+   36.51 :   15d5:   movsxd rdx,eax
+    0.12 :   15d8:   mov    rax,QWORD PTR [rbp-0x18]
+    0.00 :   15dc:   add    rdx,rax
+    0.12 :   15df:   mov    eax,DWORD PTR [rbp-0x2c]
+    0.00 :   15e2:   mov    esi,eax
+    0.00 :   15e4:   mov    rdi,rdx
+    0.00 :   15e7:   call   13f2 <neighbors>
+    0.00 :   15ec:   movzx  edx,al
+   26.82 :   15ef:   mov    eax,DWORD PTR [rbp-0x34]
+    0.00 :   15f2:   movsxd rcx,eax
+    0.00 :   15f5:   mov    rax,QWORD PTR [rbp-0x18]
+    0.00 :   15f9:   add    rax,rcx
+    0.11 :   15fc:   movzx  eax,BYTE PTR [rax]
+    1.29 :   15ff:   movzx  eax,al
+    5.44 :   1602:   mov    ecx,DWORD PTR [rbp-0x34]
+    0.12 :   1605:   movsxd rsi,ecx
+   26.64 :   1608:   mov    rcx,QWORD PTR [rbp-0x10]
+    0.00 :   160c:   lea    rbx,[rsi+rcx*1]
+    0.00 :   1610:   mov    esi,edx
+    0.00 :   1612:   mov    edi,eax
+    0.00 :   1614:   call   1497 <rule>
+    0.00 :   1619:   mov    BYTE PTR [rbx],al
+         : 79   for (int j = 1; j <= n; j++)
+    0.23 :   161b:   add    DWORD PTR [rbp-0x34],0x1
+    0.24 :   161f:   mov    eax,DWORD PTR [rbp-0x34]
+    2.00 :   1622:   cmp    eax,DWORD PTR [rbp-0x30]
+    0.12 :   1625:   jle    15d2 <step+0x7f>
+         : 84   for (int i = 1; i <= n; i++) {
+    0.00 :   1627:   add    DWORD PTR [rbp-0x38],0x1
+    0.24 :   162b:   mov    eax,DWORD PTR [rbp-0x38]
+    0.00 :   162e:   cmp    eax,DWORD PTR [rbp-0x30]
+    0.00 :   1631:   jle    159f <step+0x4c>
+         : 89   }
+         : 90   }
+    0.00 :   1637:   nop
+    0.00 :   1638:   nop
+    0.00 :   1639:   mov    rbx,QWORD PTR [rbp-0x8]
+    0.00 :   163d:   leave
+    0.00 :   163e:   ret

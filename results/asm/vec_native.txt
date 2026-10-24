@@ -1,0 +1,328 @@
+src/life.c:27:15: missed: statement clobbers memory: p_6 = calloc (count_3(D), size_4(D));
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:79:10: missed: statement clobbers memory: __builtin_fwrite ("\xd0\x9d\xd0\xb5 \xd0\xb2\xd0\xb8\xd1\x81\xd1\x82\xd0\xb0\xd1\x87\xd0\xb0\xd1\x94 \xd0\xbf\xd0\xb0\xd0\xbc\'\xd1\x8f\xd1\x82\xd1\x96\n", 1, 36, stderr.5_1);
+src/life.c:30:9: missed: statement clobbers memory: exit (1);
+src/life.c:30:9: note: ***** Analysis failed with vector mode V8DI
+src/life.c:30:9: note: ***** Skipping vector mode V64QI, which would repeat the analysis for V8DI
+src/life.c:66:27: missed: couldn't vectorize loop
+src/life.c:66:27: missed: not vectorized: control flow in loop.
+src/life.c:66:27: missed: couldn't vectorize loop
+src/life.c:66:27: missed: not vectorized: number of iterations cannot be computed.
+src/life.c:62:6: note: vectorized 0 loops in function.
+src/life.c:68:1: note: ***** Analysis failed with vector mode V16SI
+src/life.c:68:1: note: ***** Skipping vector mode V64QI, which would repeat the analysis for V16SI
+src/life.c:77:23: missed: couldn't vectorize loop
+src/life.c:53:13: missed: not vectorized: complicated access pattern.
+src/life.c:80:27: optimized: loop vectorized using 64 byte vectors
+src/life.c:80:27: optimized:  loop versioned for vectorization because of possible aliasing
+src/life.c:80:27: optimized: loop vectorized using 32 byte vectors
+src/life.c:71:6: note: vectorized 1 loops in function.
+src/life.c:71:6: note: ***** Analysis failed with vector mode V16SI
+src/life.c:71:6: note: ***** The result for vector mode V64QI would be the same
+src/life.c:71:6: note: ***** Re-trying analysis with vector mode V32QI
+src/life.c:71:6: note: ***** Analysis failed with vector mode V32QI
+src/life.c:71:6: note: ***** Re-trying analysis with vector mode V16QI
+src/life.c:71:6: note: ***** Analysis failed with vector mode V16QI
+src/life.c:71:6: note: ***** Re-trying analysis with vector mode V8QI
+src/life.c:53:30: note: ***** Analysis failed with vector mode V8QI
+src/life.c:53:30: note: ***** Re-trying analysis with vector mode V4QI
+src/life.c:53:30: note: ***** Analysis failed with vector mode V4QI
+src/life.c:89:23: missed: couldn't vectorize loop
+src/life.c:91:28: missed: not vectorized: complicated access pattern.
+src/life.c:90:27: optimized: loop vectorized using 64 byte vectors
+src/life.c:90:27: optimized: loop vectorized using 32 byte vectors
+src/life.c:86:6: note: vectorized 1 loops in function.
+src/life.c:92:12: note: ***** Analysis failed with vector mode V16SI
+src/life.c:92:12: note: ***** Skipping vector mode V64QI, which would repeat the analysis for V16SI
+src/life.c:106:14: missed: couldn't vectorize loop
+src/life.c:107:16: missed: not vectorized: unsupported use in stmt.
+src/life.c:101:18: missed: couldn't vectorize loop
+src/life.c:104:16: missed: not vectorized: unsupported use in stmt.
+src/life.c:96:10: note: vectorized 0 loops in function.
+src/life.c:107:16: note: ***** Analysis failed with vector mode V16SI
+src/life.c:107:16: note: ***** The result for vector mode V64QI would be the same
+src/life.c:107:16: note: ***** Re-trying analysis with vector mode V32QI
+src/life.c:107:16: note: ***** Analysis failed with vector mode V32QI
+src/life.c:107:16: note: ***** Re-trying analysis with vector mode V16QI
+src/life.c:107:16: note: ***** Analysis failed with vector mode V16QI
+src/life.c:107:16: note: ***** Re-trying analysis with vector mode V8QI
+src/life.c:107:16: note: ***** Analysis failed with vector mode V8QI
+src/life.c:107:16: note: ***** Re-trying analysis with vector mode V4QI
+src/life.c:107:16: note: ***** Analysis failed with vector mode V4QI
+src/life.c:121:23: missed: couldn't vectorize loop
+src/life.c:121:23: missed: not vectorized: control flow in loop.
+src/life.c:122:27: optimized: loop vectorized using 64 byte vectors
+src/life.c:122:27: optimized:  loop versioned for vectorization because of possible aliasing
+src/life.c:122:27: optimized: loop vectorized using 32 byte vectors
+src/life.c:112:6: note: vectorized 1 loops in function.
+src/life.c:114:15: missed: statement clobbers memory: f_25 = fopen (path_23(D), "wb");
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:79:10: missed: statement clobbers memory: __fprintf_chk (f_25, 2, "P5\n%d %d\n255\n", _1, _1);
+src/life.c:27:15: missed: statement clobbers memory: p_37 = calloc (_3, 1);
+src/life.c:124:9: missed: statement clobbers memory: fwrite (p_37, 1, _14, f_25);
+src/life.c:126:5: missed: statement clobbers memory: free (p_37);
+src/life.c:127:5: missed: statement clobbers memory: fclose (f_25);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:79:10: missed: statement clobbers memory: __builtin_fwrite ("\xd0\x9d\xd0\xb5 \xd0\xb2\xd0\xb8\xd1\x81\xd1\x82\xd0\xb0\xd1\x87\xd0\xb0\xd1\x94 \xd0\xbf\xd0\xb0\xd0\xbc\'\xd1\x8f\xd1\x82\xd1\x96\n", 1, 36, stderr.5_38);
+src/life.c:30:9: missed: statement clobbers memory: exit (1);
+src/life.c:116:9: missed: statement clobbers memory: perror (path_23(D));
+src/life.c:116:9: note: ***** Analysis failed with vector mode V16SI
+src/life.c:116:9: note: ***** Skipping vector mode V64QI, which would repeat the analysis for V16SI
+src/life.c:192:23: optimized: loop vectorized using 64 byte vectors
+src/life.c:192:23: optimized: loop vectorized using 32 byte vectors
+src/life.c:173:23: missed: couldn't vectorize loop
+src/life.c:173:23: missed: not vectorized: control flow in loop.
+src/life.c:141:23: missed: couldn't vectorize loop
+src/life.c:142:33: missed: not vectorized: relevant stmt not supported: _326 = glider[k_328][0];
+src/life.c:136:27: missed: couldn't vectorize loop
+src/life.c:137:9: missed: statement clobbers memory: step (&a, &b);
+src/life.c:134:23: missed: couldn't vectorize loop
+src/life.c:135:26: missed: not vectorized: relevant stmt not supported: _228 = glider[k_304][0];
+src/life.c:148:5: note: vectorized 1 loops in function.
+/usr/include/stdlib.h:483:16: missed: statement clobbers memory: _88 = strtol (_1, 0B, 10);
+/usr/include/stdlib.h:483:16: missed: statement clobbers memory: _102 = strtol (_3, 0B, 10);
+src/life.c:21:5: missed: statement clobbers memory: clock_gettime (2, &ts);
+src/life.c:21:5: missed: statement clobbers memory: clock_gettime (1, &ts);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:10: missed: statement clobbers memory: __printf_chk (2, "\xd0\x93\xd1\x80\xd0\xb0 \xc2\xab\xd0\x96\xd0\xb8\xd1\x82\xd1\x82\xd1\x8f\xc2\xbb [%s]: \xd0\xbf\xd0\xbe\xd0\xbb\xd0\xb5 %d\xc3\x97%d, \xd0\xbf\xd0\xbe\xd0\xba\xd0\xbe\xd0\xbb\xd1\x96\xd0\xbd\xd1\x8c = %d\n", "life", iftmp.6_48, iftmp.6_48, iftmp.7_46);
+src/life.c:37:26: missed: statement clobbers memory: _225 = xcalloc (100, 1);
+src/life.c:37:26: missed: statement clobbers memory: _226 = xcalloc (100, 1);
+src/life.c:137:9: missed: statement clobbers memory: step (&a, &b);
+src/life.c:138:23: missed: not vectorized: more than one data ref in stmt: a = b;
+src/life.c:140:14: missed: statement clobbers memory: _240 = count_alive (&a);
+src/life.c:143:5: missed: statement clobbers memory: free (_243);
+src/life.c:144:5: missed: statement clobbers memory: free (t$cells_331);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:10: missed: statement clobbers memory: __printf_chk (2, "\xd0\xa1\xd0\xb0\xd0\xbc\xd0\xbe\xd0\xbf\xd0\xb5\xd1\x80\xd0\xb5\xd0\xb2\xd1\x96\xd1\x80\xd0\xba\xd0\xb0 (\xd0\xb3\xd0\xbb\xd0\xb0\xd0\xb9\xd0\xb4\xd0\xb5\xd1\x80 \xd0\xb7\xd0\xb0 4 \xd0\xbf\xd0\xbe\xd0\xba\xd0\xbe\xd0\xbb\xd1\x96\xd0\xbd\xd0\xbd\xd1\x8f \xd0\xb7\xd1\x81\xd1\x83\xd0\xb2\xd0\xb0\xd1\x94\xd1\x82\xd1\x8c\xd1\x81\xd1\x8f \xd0\xbd\xd0\xb0 (1,1)): %s\n", iftmp.10_60);
+src/life.c:37:26: missed: statement clobbers memory: _143 = xcalloc (powmult_284, 1);
+src/life.c:37:26: missed: statement clobbers memory: _139 = xcalloc (powmult_284, 1);
+src/life.c:21:5: missed: statement clobbers memory: clock_gettime (1, &ts);
+src/life.c:165:5: missed: statement clobbers memory: init_random (&cur, 30);
+src/life.c:21:5: missed: statement clobbers memory: clock_gettime (1, &ts);
+src/life.c:168:17: missed: statement clobbers memory: pop_81 = xcalloc (_11, 8);
+src/life.c:169:14: missed: statement clobbers memory: _12 = count_alive (&cur);
+src/life.c:21:5: missed: statement clobbers memory: clock_gettime (1, &ts);
+src/life.c:175:9: missed: statement clobbers memory: step (&cur, &nxt);
+src/life.c:176:27: missed: not vectorized: more than one data ref in stmt: cur = nxt;
+src/life.c:21:5: missed: statement clobbers memory: clock_gettime (1, &ts);
+src/life.c:178:18: missed: statement clobbers memory: _16 = count_alive (&cur);
+src/life.c:21:5: missed: statement clobbers memory: clock_gettime (1, &ts);
+src/life.c:183:26: missed: statement clobbers memory: h_107 = grid_hash (&cur);
+src/life.c:21:5: missed: statement clobbers memory: clock_gettime (1, &ts);
+src/life.c:196:25: missed: statement clobbers memory: checksum_89 = grid_hash (&cur);
+src/life.c:198:9: missed: statement clobbers memory: save_pgm (&cur, iftmp.8_51);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:10: missed: statement clobbers memory: __printf_chk (2, "\xd0\x9d\xd0\xb0\xd1\x81\xd0\xb5\xd0\xbb\xd0\xb5\xd0\xbd\xd0\xbd\xd1\x8f: \xd0\xbd\xd0\xb0 \xd1\x81\xd1\x82\xd0\xb0\xd1\x80\xd1\x82\xd1\x96 %ld, \xd0\xbd\xd0\xb0\xd0\xbf\xd1\x80\xd0\xb8\xd0\xba\xd1\x96\xd0\xbd\xd1\x86\xd1\x96 %ld (\xd0\xbc\xd1\x96\xd0\xbd. %ld, \xd0\xbc\xd0\xb0\xd0\xba\xd1\x81. %ld)\n", pmin_87, _33, _67, _62);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:10: missed: statement clobbers memory: __printf_chk (2, "\xd0\x9f\xd0\xbe\xd0\xbb\xd0\xb5 \xd0\xbd\xd0\xb5 \xd0\xb7\xd0\xb0\xd1\x81\xd1\x82\xd0\xb8\xd0\xb3\xd0\xbb\xd0\xbe \xd0\xb7\xd0\xb0 %d \xd0\xbf\xd0\xbe\xd0\xba\xd0\xbe\xd0\xbb\xd1\x96\xd0\xbd\xd1\x8c\n", iftmp.7_46);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:10: missed: statement clobbers memory: __printf_chk (2, "\xd0\x9f\xd0\xbe\xd0\xbb\xd0\xb5 \xd0\xb7\xd0\xb0\xd1\x81\xd1\x82\xd0\xb8\xd0\xb3\xd0\xbb\xd0\xbe (\xd0\xbf\xd0\xbe\xd0\xb2\xd1\x82\xd0\xbe\xd1\x80\xd1\x8e\xd1\x94\xd1\x82\xd1\x8c\xd1\x81\xd1\x8f \xd0\xb7 \xd0\xba\xd1\x80\xd0\xbe\xd0\xba\xd0\xbe\xd0\xbc 10) \xd0\xb7 \xd0\xbf\xd0\xbe\xd0\xba\xd0\xbe\xd0\xbb\xd1\x96\xd0\xbd\xd0\xbd\xd1\x8f %d\n", stable_at_338);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:10: missed: statement clobbers memory: __printf_chk (2, "\xd0\x86\xd0\xbd\xd1\x96\xd1\x86\xd1\x96\xd0\xb0\xd0\xbb\xd1\x96\xd0\xb7\xd0\xb0\xd1\x86\xd1\x96\xd1\x8f:          %8.3f \xd1\x81\n", t_init_79);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:10: missed: statement clobbers memory: __printf_chk (2, "\xd0\x9e\xd0\xb1\xd1\x87\xd0\xb8\xd1\x81\xd0\xbb\xd0\xb5\xd0\xbd\xd0\xbd\xd1\x8f \xd0\xbf\xd0\xbe\xd0\xba\xd0\xbe\xd0\xbb\xd1\x96\xd0\xbd\xd1\x8c:    %8.3f \xd1\x81  (%.3f \xd0\xbd\xd1\x81/\xd0\xba\xd0\xbb\xd1\x96\xd1\x82\xd0\xb8\xd0\xbd\xd0\xba\xd1\x83, %.0f \xd0\xbc\xd0\xbb\xd0\xbd \xd0\xba\xd0\xbb\xd1\x96\xd1\x82\xd0\xb8\xd0\xbd\xd0\xbe\xd0\xba/\xd1\x81)\n", t_step_336, _37, _35);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:10: missed: statement clobbers memory: __printf_chk (2, "\xd0\x9f\xd1\x96\xd0\xb4\xd1\x80\xd0\xb0\xd1\x85\xd1\x83\xd0\xbd\xd0\xbe\xd0\xba \xd0\xbd\xd0\xb0\xd1\x81\xd0\xb5\xd0\xbb\xd0\xb5\xd0\xbd\xd0\xbd\xd1\x8f:   %8.3f \xd1\x81\n", t_count_335);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:10: missed: statement clobbers memory: __printf_chk (2, "\xd0\xa5\xd0\xb5\xd1\x88\xd1\x83\xd0\xb2\xd0\xb0\xd0\xbd\xd0\xbd\xd1\x8f \xd0\xbf\xd0\xbe\xd0\xbb\xd1\x8f:         %8.3f \xd1\x81\n", t_hash_339);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:10: missed: statement clobbers memory: __printf_chk (2, "\xd0\x9a\xd0\xbe\xd0\xbd\xd1\x82\xd1\x80\xd0\xbe\xd0\xbb\xd1\x8c\xd0\xbd\xd0\xb0 \xd1\x81\xd1\x83\xd0\xbc\xd0\xb0 \xd0\xbf\xd0\xbe\xd0\xbb\xd1\x8f:   %016llx\n", checksum_89);
+src/life.c:21:5: missed: statement clobbers memory: clock_gettime (2, &ts);
+src/life.c:21:5: missed: statement clobbers memory: clock_gettime (1, &ts);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:10: missed: statement clobbers memory: __printf_chk (2, "RESULT build=%s n=%d gens=%d init_s=%.4f step_s=%.4f count_s=%.4f hash_s=%.4f total_s=%.4f cpu_s=%.4f ns_per_cell=%.4f final_pop=%ld checksum=%016llx\n", "life", iftmp.6_48, iftmp.7_46, t_init_79, t_step_336, t_count_335, t_hash_339, _40, _38, _37, _33, checksum_89);
+src/life.c:220:5: missed: statement clobbers memory: free (pop_81);
+src/life.c:221:5: missed: statement clobbers memory: free (_41);
+src/life.c:222:5: missed: statement clobbers memory: free (t$cells_340);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:79:10: missed: statement clobbers memory: __fprintf_chk (stderr.9_8, 2, "\xd0\x92\xd0\xb8\xd0\xba\xd0\xbe\xd1\x80\xd0\xb8\xd1\x81\xd1\x82\xd0\xb0\xd0\xbd\xd0\xbd\xd1\x8f: %s [N] [GENERATIONS] [\xd1\x84\xd0\xb0\xd0\xb9\xd0\xbb.pgm]\n", _7);
+src/life.c:176:38: note: ***** Analysis succeeded with vector mode V8DI
+src/life.c:176:38: note: SLPing BB part
+src/life.c:133:14: note: Costing subgraph: 
+src/life.c:133:14: note: node 0x19375c88 (max_nunits=2, refcnt=1) vector(2) int
+src/life.c:133:14: note: op template: MEM <int> [(struct  *)&a] = 8;
+src/life.c:133:14: note: 	stmt 0 MEM <int> [(struct  *)&a] = 8;
+src/life.c:133:14: note: 	stmt 1 MEM <int> [(struct  *)&a + 4B] = 10;
+src/life.c:133:14: note: 	children 0x19375d08
+src/life.c:133:14: note: node (constant) 0x19375d08 (max_nunits=1, refcnt=1) vector(2) int
+src/life.c:133:14: note: 	{ 8, 10 }
+src/life.c:133:14: note: Cost model analysis: 
+src/life.c:133:14: note: Cost model analysis for part in loop 0:
+  Vector cost: 28
+  Scalar cost: 32
+src/life.c:133:31: note: Costing subgraph: 
+src/life.c:133:31: note: node 0x19375d88 (max_nunits=2, refcnt=1) vector(2) int
+src/life.c:133:31: note: op template: MEM <int> [(struct  *)&b] = 8;
+src/life.c:133:31: note: 	stmt 0 MEM <int> [(struct  *)&b] = 8;
+src/life.c:133:31: note: 	stmt 1 MEM <int> [(struct  *)&b + 4B] = 10;
+src/life.c:133:31: note: 	children 0x19375e08
+src/life.c:133:31: note: node (constant) 0x19375e08 (max_nunits=1, refcnt=1) vector(2) int
+src/life.c:133:31: note: 	{ 8, 10 }
+src/life.c:133:31: note: Cost model analysis: 
+src/life.c:133:31: note: Cost model analysis for part in loop 0:
+  Vector cost: 28
+  Scalar cost: 32
+src/life.c:135:52: note: Costing subgraph: 
+src/life.c:135:52: note: node 0x19375f08 (max_nunits=2, refcnt=1) vector(2) unsigned char
+src/life.c:135:52: note: op template: *_487 = 1;
+src/life.c:135:52: note: 	stmt 0 *_487 = 1;
+src/life.c:135:52: note: 	stmt 1 *_499 = 1;
+src/life.c:135:52: note: 	children 0x19375f88
+src/life.c:135:52: note: node (constant) 0x19375f88 (max_nunits=1, refcnt=1) vector(2) unsigned char
+src/life.c:135:52: note: 	{ 1, 1 }
+src/life.c:135:52: note: Cost model analysis: 
+src/life.c:135:52: note: Cost model analysis for part in loop 0:
+  Vector cost: 36
+  Scalar cost: 32
+src/life.c:135:52: missed: not vectorized: vectorization is not profitable.
+src/life.c:138:30: note: Costing subgraph: 
+src/life.c:138:30: note: node 0x19376008 (max_nunits=2, refcnt=1) vector(2) int
+src/life.c:138:30: note: op template: b.n = t$n_235;
+src/life.c:138:30: note: 	stmt 0 b.n = t$n_235;
+src/life.c:138:30: note: 	stmt 1 b.w = t$w_236;
+src/life.c:138:30: note: 	children 0x19376088
+src/life.c:138:30: note: node 0x19376088 (max_nunits=2, refcnt=1) vector(2) int
+src/life.c:138:30: note: op template: t$n_235 = a.n;
+src/life.c:138:30: note: 	stmt 0 t$n_235 = a.n;
+src/life.c:138:30: note: 	stmt 1 t$w_236 = a.w;
+src/life.c:138:30: note: Cost model analysis: 
+src/life.c:138:30: note: Cost model analysis for part in loop 4:
+  Vector cost: 28
+  Scalar cost: 56
+src/life.c:163:16: note: Costing subgraph: 
+src/life.c:163:16: note: node 0x19376108 (max_nunits=2, refcnt=1) vector(2) int
+src/life.c:163:16: note: op template: MEM <int> [(struct  *)&cur] = iftmp.6_48;
+src/life.c:163:16: note: 	stmt 0 MEM <int> [(struct  *)&cur] = iftmp.6_48;
+src/life.c:163:16: note: 	stmt 1 MEM <int> [(struct  *)&cur + 4B] = _140;
+src/life.c:163:16: note: 	children 0x19376208
+src/life.c:163:16: note: node (external) 0x19376208 (max_nunits=1, refcnt=1) vector(2) int
+src/life.c:163:16: note: 	{ iftmp.6_48, _140 }
+src/life.c:163:16: note: Cost model analysis: 
+src/life.c:163:16: note: Cost model analysis for part in loop 0:
+  Vector cost: 32
+  Scalar cost: 32
+src/life.c:163:35: note: Costing subgraph: 
+src/life.c:163:35: note: node 0x19376288 (max_nunits=2, refcnt=1) vector(2) int
+src/life.c:163:35: note: op template: MEM <int> [(struct  *)&nxt] = iftmp.6_48;
+src/life.c:163:35: note: 	stmt 0 MEM <int> [(struct  *)&nxt] = iftmp.6_48;
+src/life.c:163:35: note: 	stmt 1 MEM <int> [(struct  *)&nxt + 4B] = _140;
+src/life.c:163:35: note: 	children 0x19376308
+src/life.c:163:35: note: node (external) 0x19376308 (max_nunits=1, refcnt=1) vector(2) int
+src/life.c:163:35: note: 	{ iftmp.6_48, _140 }
+src/life.c:163:35: note: Cost model analysis: 
+src/life.c:163:35: note: Cost model analysis for part in loop 0:
+  Vector cost: 32
+  Scalar cost: 32
+src/life.c:176:38: note: Costing subgraph: 
+src/life.c:176:38: note: node 0x19376388 (max_nunits=2, refcnt=1) vector(2) int
+src/life.c:176:38: note: op template: nxt.n = t$n_92;
+src/life.c:176:38: note: 	stmt 0 nxt.n = t$n_92;
+src/life.c:176:38: note: 	stmt 1 nxt.w = t$w_223;
+src/life.c:176:38: note: 	children 0x19376408
+src/life.c:176:38: note: node 0x19376408 (max_nunits=2, refcnt=1) vector(2) int
+src/life.c:176:38: note: op template: t$n_92 = cur.n;
+src/life.c:176:38: note: 	stmt 0 t$n_92 = cur.n;
+src/life.c:176:38: note: 	stmt 1 t$w_223 = cur.w;
+src/life.c:176:38: note: Cost model analysis: 
+src/life.c:176:38: note: Cost model analysis for part in loop 1:
+  Vector cost: 28
+  Scalar cost: 56
+src/life.c:176:38: note: Basic block will be vectorized using SLP
+src/life.c:176:38: note: Vectorizing SLP tree:
+src/life.c:176:38: note: node 0x19375c88 (max_nunits=2, refcnt=1) vector(2) int
+src/life.c:176:38: note: op template: MEM <int> [(struct  *)&a] = 8;
+src/life.c:176:38: note: 	stmt 0 MEM <int> [(struct  *)&a] = 8;
+src/life.c:176:38: note: 	stmt 1 MEM <int> [(struct  *)&a + 4B] = 10;
+src/life.c:176:38: note: 	children 0x19375d08
+src/life.c:176:38: note: node (constant) 0x19375d08 (max_nunits=1, refcnt=1) vector(2) int
+src/life.c:176:38: note: 	{ 8, 10 }
+src/life.c:176:38: note: ------>vectorizing SLP node starting from: MEM <int> [(struct  *)&a] = 8;
+src/life.c:176:38: note: vect_is_simple_use: operand 10, type of def: constant
+src/life.c:176:38: note: transform store. ncopies = 1
+src/life.c:176:38: note: create vector_type-pointer variable to type: vector(2) int  vectorizing a pointer ref: MEM <int> [(struct  *)&a]
+src/life.c:176:38: note: created &MEM <int> [(struct  *)&a]
+src/life.c:176:38: note: add new stmt: MEM <vector(2) int> [(struct  *)&a] = { 8, 10 };
+src/life.c:176:38: note: vectorizing stmts using SLP.
+src/life.c:176:38: optimized: basic block part vectorized using 64 byte vectors
+src/life.c:176:38: note: Vectorizing SLP tree:
+src/life.c:176:38: note: node 0x19375d88 (max_nunits=2, refcnt=1) vector(2) int
+src/life.c:176:38: note: op template: MEM <int> [(struct  *)&b] = 8;
+src/life.c:176:38: note: 	stmt 0 MEM <int> [(struct  *)&b] = 8;
+src/life.c:176:38: note: 	stmt 1 MEM <int> [(struct  *)&b + 4B] = 10;
+src/life.c:176:38: note: 	children 0x19375e08
+src/life.c:176:38: note: node (constant) 0x19375e08 (max_nunits=1, refcnt=1) vector(2) int
+src/life.c:176:38: note: 	{ 8, 10 }
+src/life.c:176:38: note: ------>vectorizing SLP node starting from: MEM <int> [(struct  *)&b] = 8;
+src/life.c:176:38: note: vect_is_simple_use: operand 10, type of def: constant
+src/life.c:176:38: note: transform store. ncopies = 1
+src/life.c:176:38: note: create vector_type-pointer variable to type: vector(2) int  vectorizing a pointer ref: MEM <int> [(struct  *)&b]
+src/life.c:176:38: note: created &MEM <int> [(struct  *)&b]
+src/life.c:176:38: note: add new stmt: MEM <vector(2) int> [(struct  *)&b] = { 8, 10 };
+src/life.c:176:38: note: vectorizing stmts using SLP.
+src/life.c:176:38: optimized: basic block part vectorized using 64 byte vectors
+src/life.c:176:38: note: Vectorizing SLP tree:
+src/life.c:176:38: note: node 0x19376008 (max_nunits=2, refcnt=1) vector(2) int
+src/life.c:176:38: note: op template: b.n = t$n_235;
+src/life.c:176:38: note: 	stmt 0 b.n = t$n_235;
+src/life.c:176:38: note: 	stmt 1 b.w = t$w_236;
+src/life.c:176:38: note: 	children 0x19376088
+src/life.c:176:38: note: node 0x19376088 (max_nunits=2, refcnt=1) vector(2) int
+src/life.c:176:38: note: op template: t$n_235 = a.n;
+src/life.c:176:38: note: 	stmt 0 t$n_235 = a.n;
+src/life.c:176:38: note: 	stmt 1 t$w_236 = a.w;
+src/life.c:176:38: note: ------>vectorizing SLP node starting from: t$n_235 = a.n;
+src/life.c:176:38: note: transform load. ncopies = 1
+src/life.c:176:38: note: create vector_type-pointer variable to type: vector(2) int  vectorizing a pointer ref: a.n
+src/life.c:176:38: note: created &a
+src/life.c:176:38: note: add new stmt: vect_t_n_235.428_498 = MEM <vector(2) int> [(int *)&a];
+src/life.c:176:38: note: ------>vectorizing SLP node starting from: b.n = t$n_235;
+src/life.c:176:38: note: vect_is_simple_use: operand a.n, type of def: internal
+src/life.c:176:38: note: vect_is_simple_use: operand a.w, type of def: internal
+src/life.c:176:38: note: transform store. ncopies = 1
+src/life.c:176:38: note: create vector_type-pointer variable to type: vector(2) int  vectorizing a pointer ref: b.n
+src/life.c:176:38: note: created &b
+src/life.c:176:38: note: add new stmt: MEM <vector(2) int> [(int *)&b] = vect_t_n_235.428_498;
+src/life.c:176:38: note: vectorizing stmts using SLP.
+src/life.c:176:38: optimized: basic block part vectorized using 64 byte vectors
+src/life.c:176:38: note: Vectorizing SLP tree:
+src/life.c:176:38: note: node 0x19376108 (max_nunits=2, refcnt=1) vector(2) int
+src/life.c:176:38: note: op template: MEM <int> [(struct  *)&cur] = iftmp.6_48;
+src/life.c:176:38: note: 	stmt 0 MEM <int> [(struct  *)&cur] = iftmp.6_48;
+src/life.c:176:38: note: 	stmt 1 MEM <int> [(struct  *)&cur + 4B] = _140;
+src/life.c:176:38: note: 	children 0x19376208
+src/life.c:176:38: note: node (external) 0x19376208 (max_nunits=1, refcnt=1) vector(2) int
+src/life.c:176:38: note: 	{ iftmp.6_48, _140 }
+src/life.c:176:38: note: ------>vectorizing SLP node starting from: MEM <int> [(struct  *)&cur] = iftmp.6_48;
+src/life.c:176:38: note: vect_is_simple_use: operand iftmp.6_48 + 2, type of def: internal
+src/life.c:176:38: note: transform store. ncopies = 1
+src/life.c:176:38: note: create vector_type-pointer variable to type: vector(2) int  vectorizing a pointer ref: MEM <int> [(struct  *)&cur]
+src/life.c:176:38: note: created &MEM <int> [(struct  *)&cur]
+src/life.c:176:38: note: add new stmt: MEM <vector(2) int> [(struct  *)&cur] = _502;
+src/life.c:176:38: note: vectorizing stmts using SLP.
+src/life.c:176:38: optimized: basic block part vectorized using 64 byte vectors
+src/life.c:176:38: note: Vectorizing SLP tree:
+src/life.c:176:38: note: node 0x19376288 (max_nunits=2, refcnt=1) vector(2) int
+src/life.c:176:38: note: op template: MEM <int> [(struct  *)&nxt] = iftmp.6_48;
+src/life.c:176:38: note: 	stmt 0 MEM <int> [(struct  *)&nxt] = iftmp.6_48;
+src/life.c:176:38: note: 	stmt 1 MEM <int> [(struct  *)&nxt + 4B] = _140;
+src/life.c:176:38: note: 	children 0x19376308
+src/life.c:176:38: note: node (external) 0x19376308 (max_nunits=1, refcnt=1) vector(2) int
+src/life.c:176:38: note: 	{ iftmp.6_48, _140 }
+src/life.c:176:38: note: ------>vectorizing SLP node starting from: MEM <int> [(struct  *)&nxt] = iftmp.6_48;
+src/life.c:176:38: note: vect_is_simple_use: operand iftmp.6_48 + 2, type of def: internal
+src/life.c:176:38: note: transform store. ncopies = 1
+src/life.c:176:38: note: create vector_type-pointer variable to type: vector(2) int  vectorizing a pointer ref: MEM <int> [(struct  *)&nxt]
+src/life.c:176:38: note: created &MEM <int> [(struct  *)&nxt]
+src/life.c:176:38: note: add new stmt: MEM <vector(2) int> [(struct  *)&nxt] = _229;
+src/life.c:176:38: note: vectorizing stmts using SLP.
+src/life.c:176:38: optimized: basic block part vectorized using 64 byte vectors
+src/life.c:176:38: note: Vectorizing SLP tree:
+src/life.c:176:38: note: node 0x19376388 (max_nunits=2, refcnt=1) vector(2) int
+src/life.c:176:38: note: op template: nxt.n = t$n_92;
+src/life.c:176:38: note: 	stmt 0 nxt.n = t$n_92;
+src/life.c:176:38: note: 	stmt 1 nxt.w = t$w_223;
+src/life.c:176:38: note: 	children 0x19376408
+src/life.c:176:38: note: node 0x19376408 (max_nunits=2, refcnt=1) vector(2) int
+src/life.c:176:38: note: op template: t$n_92 = cur.n;
+src/life.c:176:38: note: 	stmt 0 t$n_92 = cur.n;
+src/life.c:176:38: note: 	stmt 1 t$w_223 = cur.w;
+src/life.c:176:38: note: ------>vectorizing SLP node starting from: t$n_92 = cur.n;
+src/life.c:176:38: note: transform load. ncopies = 1
+src/life.c:176:38: note: create vector_type-pointer variable to type: vector(2) int  vectorizing a pointer ref: cur.n
+src/life.c:176:38: note: created &cur
+src/life.c:176:38: note: add new stmt: vect_t_n_92.437_231 = MEM <vector(2) int> [(int *)&cur];
+src/life.c:176:38: note: ------>vectorizing SLP node starting from: nxt.n = t$n_92;
+src/life.c:176:38: note: vect_is_simple_use: operand cur.n, type of def: internal
+src/life.c:176:38: note: vect_is_simple_use: operand cur.w, type of def: internal
+src/life.c:176:38: note: transform store. ncopies = 1
+src/life.c:176:38: note: create vector_type-pointer variable to type: vector(2) int  vectorizing a pointer ref: nxt.n
+src/life.c:176:38: note: created &nxt
+src/life.c:176:38: note: add new stmt: MEM <vector(2) int> [(int *)&nxt] = vect_t_n_92.437_231;
+src/life.c:176:38: note: vectorizing stmts using SLP.
+src/life.c:176:38: optimized: basic block part vectorized using 64 byte vectors
+src/life.c:176:38: note: ***** The result for vector mode V64QI would be the same

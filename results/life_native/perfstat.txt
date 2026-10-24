@@ -1,0 +1,22 @@
+# started on Sat Oct 24 16:56:58 2026
+
+
+ Performance counter stats for '/lab/life/build/life_native 1024 1500' (5 runs):
+
+            232.45 msec task-clock                       #    0.988 CPUs utilized               ( +-  0.45% )
+                 4      context-switches                 #   17.208 /sec                        ( +- 10.00% )
+                 0      cpu-migrations                   #    0.000 /sec                      
+               582      page-faults                      #    2.504 K/sec                       ( +-  0.06% )
+        1059694953      cycles                           #    4.559 GHz                         ( +-  0.08% )  (86.05%)
+          14339237      stalled-cycles-frontend          #    1.35% frontend cycles idle        ( +-  4.96% )  (86.07%)
+        1522469096      instructions                     #    1.44  insn per cycle            
+                                                  #    0.01  stalled cycles per insn     ( +-  0.04% )  (86.06%)
+          85621899      branches                         #  368.352 M/sec                       ( +-  0.04% )  (86.06%)
+            275256      branch-misses                    #    0.32% of all branches             ( +-  0.38% )  (86.07%)
+         683583325      L1-dcache-loads                  #    2.941 G/sec                       ( +-  0.11% )  (86.05%)
+          77991245      L1-dcache-load-misses            #   11.41% of all L1-dcache accesses   ( +-  0.13% )  (83.64%)
+   <not supported>      LLC-loads                                                             
+   <not supported>      LLC-load-misses                                                       
+
+           0.23531 +- 0.00106 seconds time elapsed  ( +-  0.45% )
+

@@ -1,0 +1,8 @@
+ 95.36%  life_O0
+  1.51%  swapper
+  0.94%  initd
+  0.93%  dockerd
+  0.83%  containerd
+  0.40%  perf-exec
+  0.02%  perf
+  0.02%  containerd-shim

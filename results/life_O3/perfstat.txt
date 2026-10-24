@@ -1,0 +1,22 @@
+# started on Sat Oct 24 16:56:54 2026
+
+
+ Performance counter stats for '/lab/life/build/life_O3 1024 1500' (5 runs):
+
+            343.09 msec task-clock                       #    0.992 CPUs utilized               ( +-  0.45% )
+                 4      context-switches                 #   11.659 /sec                        ( +-  5.00% )
+                 0      cpu-migrations                   #    0.000 /sec                      
+               582      page-faults                      #    1.696 K/sec                       ( +-  0.12% )
+        1561412560      cycles                           #    4.551 GHz                         ( +-  0.30% )  (85.09%)
+          30428201      stalled-cycles-frontend          #    1.95% frontend cycles idle        ( +-  6.24% )  (85.06%)
+        6174113665      instructions                     #    3.95  insn per cycle            
+                                                  #    0.00  stalled cycles per insn     ( +-  0.08% )  (86.03%)
+         233059129      branches                         #  679.298 M/sec                       ( +-  0.03% )  (86.23%)
+           2674113      branch-misses                    #    1.15% of all branches             ( +-  8.52% )  (86.24%)
+        1412157111      L1-dcache-loads                  #    4.116 G/sec                       ( +-  0.06% )  (86.21%)
+          77008210      L1-dcache-load-misses            #    5.45% of all L1-dcache accesses   ( +-  0.14% )  (85.14%)
+   <not supported>      LLC-loads                                                             
+   <not supported>      LLC-load-misses                                                       
+
+           0.34597 +- 0.00150 seconds time elapsed  ( +-  0.43% )
+

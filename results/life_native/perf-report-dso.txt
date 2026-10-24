@@ -1,0 +1,51 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 360  of event 'cycles:P'
+# Event count (approx.): 1051336722
+#
+# Overhead  Shared Object    
+# ........  .................
+#
+    99.59%  life_native      
+            |          
+            |--49.70%--count_alive
+            |          main
+            |          __libc_start_call_main
+            |          __libc_start_main_impl (inlined)
+            |          _start
+            |          
+            |--18.79%--rule (inlined)
+            |          step
+            |          main
+            |          __libc_start_call_main
+            |          __libc_start_main_impl (inlined)
+            |          _start
+            |          
+            |--13.30%--neighbors (inlined)
+            |          step
+            |          main
+            |          __libc_start_call_main
+            |          __libc_start_main_impl (inlined)
+            |          _start
+            |          
+            |--9.65%--step
+            |          main
+            |          __libc_start_call_main
+            |          __libc_start_main_impl (inlined)
+            |          _start
+            |          
+             --7.77%--grid_hash
+                       main
+                       __libc_start_call_main
+                       __libc_start_main_impl (inlined)
+                       _start
+
+     0.41%  [kernel.kallsyms]
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

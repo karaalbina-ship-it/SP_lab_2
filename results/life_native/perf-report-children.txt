@@ -1,0 +1,114 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 360  of event 'cycles:P'
+# Event count (approx.): 1051336722
+#
+# Children      Self  Command      Shared Object         Symbol                            
+# ........  ........  ...........  ....................  ..................................
+#
+    99.75%     0.00%  life_native  life_native           [.] _start
+            |
+            ---_start
+               __libc_start_main_impl (inlined)
+               __libc_start_call_main
+               main
+               |          
+               |--49.70%--count_alive
+               |          
+               |--41.73%--step
+               |          |          
+               |          |--18.79%--rule (inlined)
+               |          |          
+               |           --13.30%--neighbors (inlined)
+               |          
+                --7.77%--grid_hash
+
+    99.75%     0.00%  life_native  libc.so.6             [.] __libc_start_main_impl (inlined)
+            |
+            ---__libc_start_main_impl (inlined)
+               __libc_start_call_main
+               main
+               |          
+               |--49.70%--count_alive
+               |          
+               |--41.73%--step
+               |          |          
+               |          |--18.79%--rule (inlined)
+               |          |          
+               |           --13.30%--neighbors (inlined)
+               |          
+                --7.77%--grid_hash
+
+    99.75%     0.00%  life_native  libc.so.6             [.] __libc_start_call_main
+            |
+            ---__libc_start_call_main
+               main
+               |          
+               |--49.70%--count_alive
+               |          
+               |--41.73%--step
+               |          |          
+               |          |--18.79%--rule (inlined)
+               |          |          
+               |           --13.30%--neighbors (inlined)
+               |          
+                --7.77%--grid_hash
+
+    99.75%     0.00%  life_native  life_native           [.] main
+            |
+            ---main
+               |          
+               |--49.70%--count_alive
+               |          
+               |--41.73%--step
+               |          |          
+               |          |--18.79%--rule (inlined)
+               |          |          
+               |           --13.30%--neighbors (inlined)
+               |          
+                --7.77%--grid_hash
+
+    49.70%    49.70%  life_native  life_native           [.] count_alive
+            |
+            ---_start
+               __libc_start_main_impl (inlined)
+               __libc_start_call_main
+               main
+               count_alive
+
+    41.73%    41.73%  life_native  life_native           [.] step
+            |
+            ---_start
+               __libc_start_main_impl (inlined)
+               __libc_start_call_main
+               main
+               step
+               |          
+               |--18.79%--rule (inlined)
+               |          
+                --13.30%--neighbors (inlined)
+
+    18.79%     0.00%  life_native  life_native           [.] rule (inlined)
+            |
+            ---rule (inlined)
+
+    13.30%     0.00%  life_native  life_native           [.] neighbors (inlined)
+            |
+            ---neighbors (inlined)
+
+     7.77%     7.77%  life_native  life_native           [.] grid_hash
+            |
+            ---_start
+               __libc_start_main_impl (inlined)
+               __libc_start_call_main
+               main
+               grid_hash
+
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

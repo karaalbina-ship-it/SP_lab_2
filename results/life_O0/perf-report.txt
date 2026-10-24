@@ -1,0 +1,51 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 10K of event 'cycles:P'
+# Event count (approx.): 47808533777
+#
+# Overhead  Command  Shared Object      Symbol                                       
+# ........  .......  .................  .............................................
+#
+    45.85%  life_O0  life_O0            [.] neighbors
+            |
+            ---neighbors
+               step
+               |          
+                --45.42%--main
+                          __libc_start_call_main
+                          __libc_start_main_impl (inlined)
+                          _start
+
+    27.80%  life_O0  life_O0            [.] rule
+            |
+            ---rule
+               step
+               main
+               __libc_start_call_main
+               __libc_start_main_impl (inlined)
+               _start
+
+    17.65%  life_O0  life_O0            [.] count_alive
+            |
+            ---count_alive
+               main
+               __libc_start_call_main
+               __libc_start_main_impl (inlined)
+               _start
+
+     7.99%  life_O0  life_O0            [.] step
+            |
+            ---step
+               main
+               __libc_start_call_main
+               __libc_start_main_impl (inlined)
+               _start
+
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

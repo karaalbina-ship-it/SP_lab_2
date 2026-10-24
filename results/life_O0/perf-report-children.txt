@@ -1,0 +1,111 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 10K of event 'cycles:P'
+# Event count (approx.): 47808533777
+#
+# Children      Self  Command  Shared Object         Symbol                                       
+# ........  ........  .......  ....................  .............................................
+#
+    99.57%     0.00%  life_O0  life_O0               [.] _start
+            |
+            ---_start
+               __libc_start_main_impl (inlined)
+               __libc_start_call_main
+               main
+               |          
+               |--81.48%--step
+               |          |          
+               |          |--45.53%--neighbors
+               |          |          
+               |           --27.93%--rule
+               |          
+                --17.66%--count_alive
+
+    99.57%     0.00%  life_O0  libc.so.6             [.] __libc_start_main_impl (inlined)
+            |
+            ---__libc_start_main_impl (inlined)
+               __libc_start_call_main
+               main
+               |          
+               |--81.48%--step
+               |          |          
+               |          |--45.53%--neighbors
+               |          |          
+               |           --27.93%--rule
+               |          
+                --17.66%--count_alive
+
+    99.57%     0.00%  life_O0  libc.so.6             [.] __libc_start_call_main
+            |
+            ---__libc_start_call_main
+               |          
+                --99.57%--main
+                          |          
+                          |--81.48%--step
+                          |          |          
+                          |          |--45.53%--neighbors
+                          |          |          
+                          |           --27.93%--rule
+                          |          
+                           --17.66%--count_alive
+
+    99.57%     0.00%  life_O0  life_O0               [.] main
+            |
+            ---main
+               |          
+               |--81.48%--step
+               |          |          
+               |          |--45.53%--neighbors
+               |          |          
+               |           --27.93%--rule
+               |          
+                --17.66%--count_alive
+
+    81.90%     7.99%  life_O0  life_O0               [.] step
+            |          
+            |--73.91%--step
+            |          |          
+            |          |--45.95%--neighbors
+            |          |          
+            |           --27.93%--rule
+            |          
+             --7.99%--_start
+                       __libc_start_main_impl (inlined)
+                       __libc_start_call_main
+                       main
+                       step
+
+    45.95%    45.85%  life_O0  life_O0               [.] neighbors
+            |          
+             --45.42%--_start
+                       __libc_start_main_impl (inlined)
+                       __libc_start_call_main
+                       main
+                       step
+                       neighbors
+
+    27.93%    27.80%  life_O0  life_O0               [.] rule
+            |          
+             --27.80%--_start
+                       __libc_start_main_impl (inlined)
+                       __libc_start_call_main
+                       main
+                       step
+                       rule
+
+    17.66%    17.65%  life_O0  life_O0               [.] count_alive
+            |          
+             --17.65%--_start
+                       __libc_start_main_impl (inlined)
+                       __libc_start_call_main
+                       main
+                       count_alive
+
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
